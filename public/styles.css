@@ -1,0 +1,116 @@
+/*
+ * LiftX Media Downloader — Production Stylesheet (public/styles.css)
+ * Brand Accent: LiftX Royal Blue (#1167D8)
+ * Architecture: 60-30-10 Neutral/Surface/Accent System with Light & Dark Theme Tokens
+ */
+
+:root {
+  --liftx-blue: #1167D8;
+  --liftx-blue-hover: #0D54B3;
+  --liftx-blue-subtle: rgba(17, 103, 216, 0.1);
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #F1F5F9;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --border-hairline: #E2E8F0;
+  --danger: #DC2626;
+  --success: #16A34A;
+  --radius-outer: 16px;
+  --radius-inner: 10px;
+}
+
+html.dark {
+  --bg-canvas: #090D16;
+  --bg-surface: #111827;
+  --bg-elevated: #1E293B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --border-hairline: #1E293B;
+  --liftx-blue-subtle: rgba(17, 103, 216, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.liftx-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+html.dark .liftx-header {
+  background: rgba(9, 13, 22, 0.85);
+}
+
+.liftx-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.liftx-hero-title {
+  font-size: clamp(2.25rem, 4.2vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.liftx-brand-highlight {
+  color: var(--liftx-blue);
+}
+
+.liftx-input-shell {
+  background: var(--bg-surface);
+  border: 2px solid var(--border-hairline);
+  border-radius: var(--radius-outer);
+  padding: 8px;
+  transition: border-color 160ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liftx-input-shell:focus-within {
+  border-color: var(--liftx-blue);
+  box-shadow: 0 0 0 4px var(--liftx-blue-subtle);
+}
+
+.liftx-btn-primary {
+  background-color: var(--liftx-blue);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius-inner);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+.liftx-btn-primary:hover {
+  background-color: var(--liftx-blue-hover);
+}
+
+.liftx-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

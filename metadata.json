@@ -1,0 +1,6 @@
+{
+  "name": "LiftX Media Downloader",
+  "description": "Free universal social media video, reel, photo, and GIF downloader supporting 1000+ public platforms in original HD quality without watermarks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
