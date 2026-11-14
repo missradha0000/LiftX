@@ -57,7 +57,7 @@ function strictYouTubeBlockerMiddleware(req: Request, res: Response, next: NextF
       success: false,
       blocked: true,
       code: 'YOUTUBE_STRICTLY_FORBIDDEN',
-      error: 'YouTube downloads are strictly not supported on LiftX Media Downloader.'
+      error: 'YouTube downloads are not supported due to policy guidelines.'
     });
     return;
   }
@@ -266,7 +266,7 @@ async function startServer() {
       res.status(403).json({
         success: false,
         blocked: true,
-        error: 'YouTube downloads are strictly not supported on LiftX Media Downloader.'
+        error: 'YouTube downloads are not supported due to policy guidelines.'
       });
       return;
     }
@@ -369,7 +369,7 @@ async function startServer() {
         success: false,
         blocked: true,
         code: 'YOUTUBE_STRICTLY_FORBIDDEN',
-        error: 'YouTube downloads are strictly not supported on LiftX Media Downloader.'
+        error: 'YouTube downloads are not supported due to policy guidelines.'
       });
       return;
     }
@@ -423,7 +423,7 @@ async function startServer() {
       res.status(403).json({
         success: false,
         blocked: true,
-        error: 'YouTube downloads are strictly not supported on LiftX Media Downloader.'
+        error: 'YouTube downloads are not supported due to policy guidelines.'
       });
       return;
     }
